@@ -16,7 +16,7 @@ const features = [
   {
     title: "Solid Mineral",
     description:
-      "We deal in solid mineral resources, including exploration, extraction, and trading. Specializing in gems, semi-gemstones, and precious metals locally and internationally.",
+      "We deal in solid mineral resources, including exploration, extraction, and trading in gems, semi-gemstones, and precious metals.",
     image: screenshotPayroll,
   },
   {

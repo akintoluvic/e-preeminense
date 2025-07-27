@@ -1,31 +1,31 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 import {
   Popover,
   PopoverButton,
   PopoverBackdrop,
   PopoverPanel,
-} from '@headlessui/react'
-import clsx from 'clsx'
+} from "@headlessui/react";
+import clsx from "clsx";
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { NavLink } from '@/components/NavLink'
-import Image from 'next/image'
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import { NavLink } from "@/components/NavLink";
+import Image from "next/image";
 
 function MobileNavLink({
   href,
   children,
 }: {
-  href: string
-  children: React.ReactNode
+  href: string;
+  children: React.ReactNode;
 }) {
   return (
     <PopoverButton as={Link} href={href} className="block w-full p-2">
       {children}
     </PopoverButton>
-  )
+  );
 }
 
 function MobileNavIcon({ open }: { open: boolean }) {
@@ -40,19 +40,19 @@ function MobileNavIcon({ open }: { open: boolean }) {
       <path
         d="M0 1H14M0 7H14M0 13H14"
         className={clsx(
-          'origin-center transition',
-          open && 'scale-90 opacity-0',
+          "origin-center transition",
+          open && "scale-90 opacity-0"
         )}
       />
       <path
         d="M2 2L12 12M12 2L2 12"
         className={clsx(
-          'origin-center transition',
-          !open && 'scale-90 opacity-0',
+          "origin-center transition",
+          !open && "scale-90 opacity-0"
         )}
       />
     </svg>
-  )
+  );
 }
 
 function MobileNavigation() {
@@ -79,7 +79,7 @@ function MobileNavigation() {
         <MobileNavLink href="/login">Sign in</MobileNavLink>
       </PopoverPanel>
     </Popover>
-  )
+  );
 }
 
 export function Header() {
@@ -89,7 +89,7 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link
-              href="#"
+              href="/"
               aria-label="Home"
               className="flex items-center gap-x-2 text-lg"
             >
@@ -124,5 +124,5 @@ export function Header() {
         </nav>
       </Container>
     </header>
-  )
+  );
 }
