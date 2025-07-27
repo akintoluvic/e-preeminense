@@ -1,69 +1,69 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
-import clsx from 'clsx'
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import { Container } from "@/components/Container";
+import backgroundImage from "@/images/background-features.jpg";
+import screenshotExpenses from "@/images/screenshots/expenses.png";
+import screenshotPayroll from "@/images/screenshots/payroll.png";
+import screenshotReporting from "@/images/screenshots/reporting.png";
+import screenshotVatReturns from "@/images/screenshots/vat-returns.png";
 
 const features = [
   {
-    title: 'Solid Mineral',
+    title: "Solid Mineral",
     description:
-      'We deal in solid mineral resources, including exploration, extraction, and trading. Specializing in gems, semi-gemstones, and precious metals locally and internationally.',
+      "We deal in solid mineral resources, including exploration, extraction, and trading. Specializing in gems, semi-gemstones, and precious metals locally and internationally.",
     image: screenshotPayroll,
   },
   {
-    title: 'Engineering Technology',
+    title: "Engineering Technology",
     description:
-      'We provide engineering technology solutions and services. This covers power, oil and gas, design, and industrial operations.',
+      "We provide engineering technology solutions and services. This covers power, oil and gas, design, and industrial operations.",
     image: screenshotExpenses,
   },
   {
-    title: 'Agriculture',
+    title: "Agriculture",
     description:
-      'We are agricultural producers, processors, and traders. Our ventures include farming, food crops, herbs, and health product research.',
+      "We are agricultural producers, processors, and traders. Our ventures include farming, food crops, herbs, and health product research.",
     image: screenshotVatReturns,
   },
   {
-    title: 'Importing and Exporting',
+    title: "Importing and Exporting",
     description:
-      'We import and export goods, products, and services. Our logistics operations extend our value to international markets.',
+      "We import and export goods, products, and services. Our logistics operations extend our value to international markets.",
     image: screenshotReporting,
   },
   {
-    title: 'Business consultancy',
+    title: "Business consultancy",
     description:
-      'We provide advisory services on business strategy, operations and management.',
+      "We provide advisory services on business strategy, operations and management.",
     image: screenshotPayroll,
   },
-]
+];
 
 export function PrimaryFeatures() {
-  let [tabOrientation, setTabOrientation] = useState<'horizontal' | 'vertical'>(
-    'horizontal',
-  )
+  const [tabOrientation, setTabOrientation] = useState<
+    "horizontal" | "vertical"
+  >("horizontal");
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+    const lgMediaQuery = window.matchMedia("(min-width: 1024px)");
 
     function onMediaQueryChange({ matches }: { matches: boolean }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
+      setTabOrientation(matches ? "vertical" : "horizontal");
     }
 
-    onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+    onMediaQueryChange(lgMediaQuery);
+    lgMediaQuery.addEventListener("change", onMediaQueryChange);
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
-    }
-  }, [])
+      lgMediaQuery.removeEventListener("change", onMediaQueryChange);
+    };
+  }, []);
 
   return (
     <section
@@ -91,7 +91,7 @@ export function PrimaryFeatures() {
         </div>
         <TabGroup
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
-          vertical={tabOrientation === 'vertical'}
+          vertical={tabOrientation === "vertical"}
         >
           {({ selectedIndex }) => (
             <>
@@ -101,19 +101,19 @@ export function PrimaryFeatures() {
                     <div
                       key={feature.title}
                       className={clsx(
-                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
+                        "group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6",
                         selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-white/10 lg:ring-inset'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5',
+                          ? "bg-white lg:bg-white/10 lg:ring-1 lg:ring-white/10 lg:ring-inset"
+                          : "hover:bg-white/10 lg:hover:bg-white/5"
                       )}
                     >
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg data-selected:not-data-focus:outline-hidden',
+                            "font-display text-lg data-selected:not-data-focus:outline-hidden",
                             selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white',
+                              ? "text-blue-600 lg:text-white"
+                              : "text-blue-100 hover:text-white lg:text-white"
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
@@ -122,10 +122,10 @@ export function PrimaryFeatures() {
                       </h3>
                       <p
                         className={clsx(
-                          'mt-2 hidden text-sm lg:block',
+                          "mt-2 hidden text-sm lg:block",
                           selectedIndex === featureIndex
-                            ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white',
+                            ? "text-white"
+                            : "text-blue-100 group-hover:text-white"
                         )}
                       >
                         {feature.description}
@@ -160,5 +160,5 @@ export function PrimaryFeatures() {
         </TabGroup>
       </Container>
     </section>
-  )
+  );
 }
