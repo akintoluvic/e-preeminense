@@ -2,12 +2,11 @@ import Image from "next/image";
 
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
-import logoLaravel from "@/images/logos/laravel.svg";
-import logoMirage from "@/images/logos/mirage.svg";
-import logoStatamic from "@/images/logos/statamic.svg";
-import logoStaticKit from "@/images/logos/statickit.svg";
-import logoTransistor from "@/images/logos/transistor.svg";
-import logoTuple from "@/images/logos/tuple.svg";
+import logoCAC from "@/images/logos/CAC.png";
+import logoMervii from "@/images/logos/Mervii.png";
+import logoNBTI from "@/images/logos/NBTI.png";
+import logoNEPC from "@/images/logos/NEPC.png";
+import logoNIMechE from "@/images/logos/NIMechE.jpg";
 
 export function Hero() {
   return (
@@ -49,7 +48,7 @@ export function Hero() {
       </div>
       <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">
-          Trusted by these six companies so far
+          Trusted and certified by
         </p>
         <ul
           role="list"
@@ -57,14 +56,14 @@ export function Hero() {
         >
           {[
             [
-              { name: "Transistor", logo: logoTransistor },
-              { name: "Tuple", logo: logoTuple },
-              { name: "StaticKit", logo: logoStaticKit },
+              { name: "NIMechE", logo: logoNIMechE },
+              { name: "NEPC", logo: logoNEPC },
+              { name: "NBTI", logo: logoNBTI },
             ],
             [
-              { name: "Mirage", logo: logoMirage },
-              { name: "Laravel", logo: logoLaravel },
-              { name: "Statamic", logo: logoStatamic },
+              { name: "Mervii", logo: logoMervii },
+              { name: "CAC", logo: logoCAC },
+              { name: "NBTI", logo: logoNBTI },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
@@ -74,7 +73,12 @@ export function Hero() {
               >
                 {group.map((company) => (
                   <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
+                    <Image
+                      src={company.logo}
+                      height={80}
+                      alt={company.name}
+                      unoptimized
+                    />
                   </li>
                 ))}
               </ul>
