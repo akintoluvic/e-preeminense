@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-call-to-action.jpg'
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import backgroundImage from "@/images/background-call-to-action.jpg";
 
 export function AboutUs() {
   return (
@@ -21,7 +21,7 @@ export function AboutUs() {
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-display text-4xl tracking-tight text-white sm:text-4xl">
-            Get started today
+            About Us
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
             Eternal Preeminence ltd is a multi-disciplinary company under the
@@ -41,5 +41,5 @@ export function AboutUs() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
