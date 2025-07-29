@@ -104,6 +104,37 @@ const features: Array<Feature> = [
       );
     },
   },
+  {
+    name: "Payroll",
+    summary: "Manage payroll and employee records with ease.",
+    description:
+      "We provide advisory services on business strategy, operations and management.",
+    icon: function PayrollIcon() {
+      return (
+        <path
+          d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm-1.5 15h-3v-1.5h3V17Zm0-3h-3v-1.5h3V14Zm0-3h-3V9.5h3V11Zm4.5 6H9v-1.5h6V14Zm0-3H9v-1.5h6V11Zm0-3H9V6.5h6V8Z"
+          fill="#fff"
+        />
+      );
+    },
+    image: screenshotContacts,
+  },
+  {
+    name: "Advisory",
+    summary:
+      "We provide advisory services on business strategy, operations and management.",
+    description:
+      "We provide advisory services on business strategy, operations and management.",
+    icon: function AdvisoryIcon() {
+      return (
+        <path
+          d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm-1.5 15h-3v-1.5h3V17Zm0-3h-3v-1.5h3V14Zm0-3h-3V9.5h3V11Zm4.5 6H9v-1.5h6V14Zm0-3H9v-1.5h6V11Zm0-3H9V6.5h6V8Z"
+          fill="#fff"
+        />
+      );
+    },
+    image: screenshotContacts,
+  },
 ];
 
 function Feature({
@@ -174,7 +205,7 @@ function FeaturesDesktop() {
     <TabGroup className="hidden lg:mt-20 lg:block">
       {({ selectedIndex }) => (
         <>
-          <TabList className="grid grid-cols-3 gap-x-8">
+          <TabList className="grid grid-cols-5 gap-x-8">
             {features.map((feature, featureIndex) => (
               <Feature
                 key={feature.summary}
