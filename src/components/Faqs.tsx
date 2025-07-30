@@ -1,61 +1,36 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
+import { Container } from "@/components/Container";
+import backgroundImage from "@/images/background-faqs.jpg";
 
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: "Is your company certified?",
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        "Yes — we are fully certified and licensed to operate legally and professionally.",
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
-    },
-    {
-      question: 'How do I apply for a job at TaxPal?',
+      question: "Do you implement quality control?",
       answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+        "Absolutely. We maintain strict quality control protocols to ensure operational excellence and client satisfaction.",
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: "Who holds responsibility for product risks and liabilities?",
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
-    },
-    {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-      answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-    },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        "Responsibility varies based on the type of business engagement and contractual agreement. In most cases, our liability ends once FOB (Free on Board) conditions are met and approved by the client.",
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
+      question: "How can I work with your company?",
       answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-    },
-    {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        "We typically recruit individuals who are existing business partners, proven contributors, or innovators who bring valuable technological solutions to our operations.",
     },
   ],
-]
+];
 
 export function Faqs() {
   return (
@@ -106,5 +81,5 @@ export function Faqs() {
         </ul>
       </Container>
     </section>
-  )
+  );
 }
