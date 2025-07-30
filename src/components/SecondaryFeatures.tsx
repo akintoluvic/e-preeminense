@@ -18,12 +18,6 @@ interface Feature {
   icon: React.ComponentType;
 }
 
-// The features array contains the key services offered by the business.
-// •⁠  ⁠Dealer in precious metals and stones
-// •⁠  ⁠Freight forwarding and  clearing
-// •⁠  ⁠Technology service provider
-// •⁠  ⁠Agricultural product trader
-
 const features: Array<Feature> = [
   {
     name: "Gem stones",
