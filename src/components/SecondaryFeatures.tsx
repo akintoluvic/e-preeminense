@@ -26,8 +26,8 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: "Precious Metals and Stones",
-    summary: "Stay on top of things with always up-to-date reporting features.",
+    name: "Gem stones",
+    summary: "Precious Metals and Stones",
     description:
       "We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.",
     image: screenshotProfitLoss,
@@ -60,9 +60,8 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: "Freight Forwarding and Clearing",
-    summary:
-      "Never lose track of what’s in stock with accurate inventory tracking.",
+    name: "Logistics",
+    summary: "Freight Forwarding and Clearing",
     description:
       "We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.",
     image: screenshotInventory,
