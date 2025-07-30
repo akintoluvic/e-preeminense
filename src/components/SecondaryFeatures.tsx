@@ -9,6 +9,7 @@ import { Container } from "@/components/Container";
 import screenshotContacts from "@/images/screenshots/contacts.png";
 import screenshotInventory from "@/images/screenshots/inventory.png";
 import screenshotProfitLoss from "@/images/screenshots/profit-loss.png";
+import mineralImage from "@/images/services/mineral.jpeg";
 
 interface Feature {
   name: React.ReactNode;
@@ -24,7 +25,7 @@ const features: Array<Feature> = [
     summary: "Precious Metals and Stones",
     description:
       "We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.",
-    image: screenshotProfitLoss,
+    image: mineralImage,
     icon: function ReportingIcon() {
       const id = useId();
       return (
@@ -205,7 +206,7 @@ function FeaturesDesktop() {
                 >
                   <div className="w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
                     <Image
-                      className="w-full"
+                      className="w-full max-h-[428px] object-cover"
                       src={feature.image}
                       alt=""
                       sizes="52.75rem"
