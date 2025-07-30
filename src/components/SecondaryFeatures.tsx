@@ -18,9 +18,15 @@ interface Feature {
   icon: React.ComponentType;
 }
 
+// The features array contains the key services offered by the business.
+// •⁠  ⁠Dealer in precious metals and stones
+// •⁠  ⁠Freight forwarding and  clearing
+// •⁠  ⁠Technology service provider
+// •⁠  ⁠Agricultural product trader
+
 const features: Array<Feature> = [
   {
-    name: "Reporting",
+    name: "Precious Metals and Stones",
     summary: "Stay on top of things with always up-to-date reporting features.",
     description:
       "We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.",
@@ -54,7 +60,7 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: "Inventory",
+    name: "Freight Forwarding and Clearing",
     summary:
       "Never lose track of what’s in stock with accurate inventory tracking.",
     description:
@@ -82,9 +88,8 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: "Contacts",
-    summary:
-      "Organize all of your contacts, service providers, and invoices in one place.",
+    name: "Technology",
+    summary: "Technology Service Provider",
     description:
       "This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.",
     image: screenshotContacts,
@@ -103,37 +108,6 @@ const features: Array<Feature> = [
         </>
       );
     },
-  },
-  {
-    name: "Payroll",
-    summary: "Manage payroll and employee records with ease.",
-    description:
-      "We provide advisory services on business strategy, operations and management.",
-    icon: function PayrollIcon() {
-      return (
-        <path
-          d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm-1.5 15h-3v-1.5h3V17Zm0-3h-3v-1.5h3V14Zm0-3h-3V9.5h3V11Zm4.5 6H9v-1.5h6V14Zm0-3H9v-1.5h6V11Zm0-3H9V6.5h6V8Z"
-          fill="#fff"
-        />
-      );
-    },
-    image: screenshotContacts,
-  },
-  {
-    name: "Advisory",
-    summary:
-      "We provide advisory services on business strategy, operations and management.",
-    description:
-      "We provide advisory services on business strategy, operations and management.",
-    icon: function AdvisoryIcon() {
-      return (
-        <path
-          d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm-1.5 15h-3v-1.5h3V17Zm0-3h-3v-1.5h3V14Zm0-3h-3V9.5h3V11Zm4.5 6H9v-1.5h6V14Zm0-3H9v-1.5h6V11Zm0-3H9V6.5h6V8Z"
-          fill="#fff"
-        />
-      );
-    },
-    image: screenshotContacts,
   },
 ];
 
@@ -205,7 +179,7 @@ function FeaturesDesktop() {
     <TabGroup className="hidden lg:mt-20 lg:block">
       {({ selectedIndex }) => (
         <>
-          <TabList className="grid grid-cols-5 gap-x-8">
+          <TabList className="grid grid-cols-3 gap-x-8">
             {features.map((feature, featureIndex) => (
               <Feature
                 key={feature.summary}
@@ -265,11 +239,11 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            Key services
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            We offer a range of services to help businesses streamline their
+            operations and achieve their goals. Our key services include:
           </p>
         </div>
         <FeaturesMobile />
