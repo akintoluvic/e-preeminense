@@ -61,9 +61,8 @@ export function Hero() {
               { name: "NBTI", logo: logoNBTI },
             ],
             [
-              { name: "Mervii", logo: logoMervii },
               { name: "CAC", logo: logoCAC },
-              { name: "NBTI", logo: logoNBTI },
+              { name: "Mervii", logo: logoMervii },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
@@ -75,7 +74,7 @@ export function Hero() {
                   <li key={company.name} className="flex">
                     <Image
                       src={company.logo}
-                      height={80}
+                      height={60}
                       alt={company.name}
                       unoptimized
                     />
