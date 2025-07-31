@@ -72,11 +72,11 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-closed:scale-95 data-closed:opacity-0 data-enter:duration-150 data-enter:ease-out data-leave:duration-100 data-leave:ease-in"
       >
-        <MobileNavLink href="#features">Features</MobileNavLink>
+        <MobileNavLink href="#features">Our Solutions</MobileNavLink>
         <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-        <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+        <MobileNavLink href="#about-us">About Us</MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
-        <MobileNavLink href="/login">Sign in</MobileNavLink>
+        <MobileNavLink href="#contact-us">Contact Us</MobileNavLink>
       </PopoverPanel>
     </Popover>
   );
@@ -100,23 +100,25 @@ export function Header() {
                 alt="Eternal Logo"
                 className="h-10 w-auto"
               />
-              <span className="font-medium text-slate-900">Eternal</span>
+              <span className="font-medium text-slate-900">
+                Eternal Preeminence Ltd
+              </span>
             </Link>
-            <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
-            </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+            <div className="hidden md:flex md:gap-x-6 items-center">
+              <NavLink href="#features">Our Solutions</NavLink>
+              <NavLink href="#testimonials">Testimonials</NavLink>
+              <NavLink href="#about-us">About Us</NavLink>
+              <Button
+                className="hidden lg:inline"
+                href="/register"
+                color="blue"
+              >
+                <span>Contact Us</span>
+              </Button>
             </div>
-            <Button href="/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
+
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
