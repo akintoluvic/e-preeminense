@@ -29,9 +29,9 @@ export function Footer() {
             </Link>
             <nav className="text-sm" aria-label="quick links">
               <div className="-my-1 flex justify-center gap-x-6">
-                <NavLink href="#features">Features</NavLink>
+                <NavLink href="#features">Our Solutions</NavLink>
                 <NavLink href="#testimonials">Testimonials</NavLink>
-                <NavLink href="#pricing">Pricing</NavLink>
+                <NavLink href="#about-us">About Us</NavLink>
               </div>
             </nav>
           </div>
@@ -93,9 +93,9 @@ export function Footer() {
               </svg>
             </Link>
           </div>
-          <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} TaxPal. All rights
-            reserved.
+          <p className="mt-6 text-sm text-center sm:text-right text-slate-500 sm:mt-0">
+            Copyright &copy; {new Date().getFullYear()} Eternal Preeminence. All
+            rights reserved.
           </p>
         </div>
       </Container>
