@@ -112,7 +112,7 @@ export function Header() {
               <NavLink href="#about-us">About Us</NavLink>
               <Button
                 className="hidden lg:inline"
-                href="/register"
+                href="#contact-us"
                 color="blue"
               >
                 <span>Contact Us</span>
