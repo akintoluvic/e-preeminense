@@ -35,8 +35,8 @@ export function AboutUs() {
             affiliates back up support as when required. These ensures that our
             Jobs are completed to international standard applicable.
           </p>
-          <Button href="/register" color="white" className="mt-10">
-            Get 6 months free
+          <Button href="#contact-us" color="white" className="mt-10">
+            Contact Us
           </Button>
         </div>
       </Container>
