@@ -155,7 +155,7 @@ function FeaturesMobile() {
             <div className="absolute -inset-x-4 top-8 bottom-0 bg-slate-200 sm:-inset-x-6" />
             <div className="relative mx-auto w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
               <Image
-                className="w-full"
+                className="w-full object-cover max-h-[428px]"
                 src={feature.image}
                 alt=""
                 sizes="52.75rem"
