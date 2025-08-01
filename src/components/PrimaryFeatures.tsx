@@ -9,8 +9,9 @@ import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
 import screenshotExpenses from "@/images/screenshots/expenses.png";
 import screenshotPayroll from "@/images/screenshots/payroll.png";
-import screenshotReporting from "@/images/screenshots/reporting.png";
-import screenshotVatReturns from "@/images/screenshots/vat-returns.png";
+import agricultureImage from "@/images/services/greenhouse.jpg";
+import bizConsultImage from "@/images/services/business.jpg";
+import importImage from "@/images/services/shipping.jpg";
 
 const features = [
   {
@@ -29,19 +30,19 @@ const features = [
     title: "Agriculture",
     description:
       "We are agricultural producers, processors, and traders. Our ventures include farming, food crops, herbs, and health product research.",
-    image: screenshotVatReturns,
+    image: agricultureImage,
   },
   {
     title: "Importing and Exporting",
     description:
       "We import and export goods, products, and services. Our logistics operations extend our value to international markets.",
-    image: screenshotReporting,
+    image: importImage,
   },
   {
     title: "Business consultancy",
     description:
       "We provide advisory services on business strategy, operations and management.",
-    image: screenshotPayroll,
+    image: bizConsultImage,
   },
 ];
 
@@ -143,9 +144,9 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-180 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-271.25">
+                    <div className="mt-10 w-180 max-h-[730px] overflow-hidden border-8 bg-gray-200 rounded-xl shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-271.25">
                       <Image
-                        className="w-full"
+                        className="w-full object-cover h-full"
                         src={feature.image}
                         alt=""
                         priority
