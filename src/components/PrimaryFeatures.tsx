@@ -7,18 +7,18 @@ import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
-import screenshotExpenses from "@/images/screenshots/expenses.png";
-import screenshotPayroll from "@/images/screenshots/payroll.png";
+import screenshotExpenses from "@/images/services/machinery.jpg";
 import agricultureImage from "@/images/services/greenhouse.jpg";
 import bizConsultImage from "@/images/services/business.jpg";
 import importImage from "@/images/services/shipping.jpg";
+import mineralImage from "@/images/services/solid-minerals.jpg";
 
 const features = [
   {
     title: "Solid Mineral",
     description:
       "We deal with solid mineral resources, including exploration, extraction, and trading in gems, semi-gemstones, and precious metals.",
-    image: screenshotPayroll,
+    image: mineralImage,
   },
   {
     title: "Engineering Technology",

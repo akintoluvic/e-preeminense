@@ -6,10 +6,9 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import clsx from "clsx";
 
 import { Container } from "@/components/Container";
-import screenshotContacts from "@/images/screenshots/contacts.png";
-import screenshotInventory from "@/images/screenshots/inventory.png";
-import screenshotProfitLoss from "@/images/screenshots/profit-loss.png";
-import mineralImage from "@/images/services/mineral.jpeg";
+import technologyContacts from "@/images/services/technology.jpg";
+import logisticsImage from "@/images/services/logistics.jpg";
+import mineralImage from "@/images/services/stones.jpg";
 
 interface Feature {
   name: React.ReactNode;
@@ -24,7 +23,7 @@ const features: Array<Feature> = [
     name: "Gem stones",
     summary: "Precious Metals and Stones",
     description:
-      "We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.",
+      "We serve you better on any of your mineral deals more specifically on gemstones, metals and other industrial resources like aquamarine, tourmaline, garnet etc.",
     image: mineralImage,
     icon: function ReportingIcon() {
       const id = useId();
@@ -58,8 +57,8 @@ const features: Array<Feature> = [
     name: "Logistics",
     summary: "Freight Forwarding and Clearing",
     description:
-      "We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.",
-    image: screenshotInventory,
+      "We help businesses related to freights to forward, clear and consult for their custom duties and save delivery.",
+    image: logisticsImage,
     icon: function InventoryIcon() {
       return (
         <>
@@ -85,8 +84,8 @@ const features: Array<Feature> = [
     name: "Technology",
     summary: "Technology Service Provider",
     description:
-      "This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.",
-    image: screenshotContacts,
+      "We help businesses related to freights to forward, clear and consult for their custom duties and save delivery.",
+    image: technologyContacts,
     icon: function ContactsIcon() {
       return (
         <>
@@ -206,7 +205,7 @@ function FeaturesDesktop() {
                 >
                   <div className="w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
                     <Image
-                      className="w-full max-h-[428px] object-cover"
+                      className={clsx("w-full max-h-[428px] object-cover")}
                       src={feature.image}
                       alt=""
                       sizes="52.75rem"
